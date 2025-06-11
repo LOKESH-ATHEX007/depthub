@@ -1,0 +1,365 @@
+
+*{
+    margin:0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+
+}
+body{
+   
+   /* max-width:; */
+   max-height: 100vh;
+   padding-left: 7rem;
+   background:#31384a;
+}
+
+.main--content
+{
+    position: relative;
+    /* z-index: 1; */
+    background:#31384a;
+    height:100vh;
+    width: 100%;
+    padding: 1rem;
+
+
+}
+.header--wrapper img{
+    width:50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+
+}
+
+.header--wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #fff;
+   
+    border-radius: 10px;
+    padding: 10px 2rem;
+    margin-bottom: 1rem;
+    background:#1d2933;
+    margin-bottom:1.5rem;
+    
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
+
+}
+.header--title{
+    color: rgb(42,192,140); ;
+}
+.user--info{
+    display:flex;
+    align-items: center;
+    gap: 1rem;
+}
+.searh--box{
+    background:rgb(237, 237, 237);
+    border-radius:  15px;
+    color: rgba(133,99, 186, 255);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 12px;
+}
+.searh--box input{
+    background: transparent;
+    padding: 10px;
+
+
+}.searh--box i{
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+}
+.searh--box i:hover{
+    transform: scale(1.2);
+}
+.card--container{
+    background:#1d2933; 
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);  
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom:1.5rem;
+  
+}
+
+
+.card--wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom:1rem;
+
+}
+.main--title{
+    color:rgb(42,192,140);;
+    padding-bottom: 10px;
+    font-size: 15px;
+}
+.payment--card{
+    flex-grow: 1;
+    background: rgb(229, 223, 223);
+    border-radius: 10px;
+    padding: 1.2rem;
+    width: 290px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease-in-out;
+   
+        display: block;
+        cursor: pointer !important; /* Ensures it shows pointer cursor */
+    }
+    
+
+.payment--card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); 
+    
+
+}
+.card--header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+.amount{
+    display: flex;
+    flex-direction: column;
+}
+.title{
+    font-size: 12px;
+    font-weight: 200;
+}
+.amount--value{
+    font-size: 24px;
+
+    font-weight: 600;
+
+}
+.icon{
+    color:#fff;
+    padding: 1rem;
+    height: 60px;
+    width: 60px;
+    text-align:center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    background: rgb(255, 246, 246);
+    display: flex;
+    align-items: center;justify-content: center;
+    
+}
+.icon1{
+    color:#fff;
+    /* padding: .3rem; */
+    height: 60px;
+    width: 60px;
+    text-align:center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    background: rgb(255, 246, 246);
+    display: flex;
+    align-items: center;justify-content: center;
+    
+}
+.icon1 img{
+    height:80%;
+  
+}
+.card-detail{
+    font-size: 18px;
+    color:#2d2741;
+    letter-spacing: 2px;
+
+}
+.light-red{
+    background:rgb(255, 168, 168);
+
+}
+.light-purple{
+    background: rgb(255, 188, 255);
+
+}
+.light-green{
+    background: rgb(188, 253, 188);
+}
+.light-blue{
+    background: rgb(236, 236, 254);
+}
+.light-blue1{
+    background: #cab0ff;
+}
+.light-orange{
+    background: rgb(255, 211, 130);
+}
+.dark-red{
+    background: red;
+}
+.dark-purple{
+    background: purple;
+}
+.dark-green{
+    background: green;
+}
+.dark-blue{
+    background: blue;
+}
+.dark-yellow{
+    background: rgb(255, 196, 0);
+}
+.dark-green2{
+    background: rgb(0, 96, 120);
+}
+
+.tabular--wrapper{
+    
+background: #fff;
+background:#1d2933;
+box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
+margin-top: 1rem;
+border-radius:  10px;
+padding: 1rem;
+padding-bottom: .2rem;
+
+
+}
+.table-container{
+    width: 100%;
+
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+thead{
+    background: rgba(133,99, 186, 255);
+    color: #fff;
+}
+th{
+    padding: 15px;
+    text-align: left;
+
+}
+tbody{
+    background: #f2f2f2;
+
+}
+td{
+    padding: 15px;
+    font-size: 14px;
+    color: #333;
+}
+ tr:nth-child(even){
+    background: #fff;
+
+}
+tfoot{
+    background: rgba(133,99, 186, 255);
+    font-weight: bold;
+    color: #fff;
+}
+tfoot td{
+    padding: 15px;
+
+
+}
+.table-container button{
+    color: green;
+    background: none;
+    cursor: pointer;
+}
+
+
+
+
+.feature-card {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    color:white;
+    /* cursor: pointer; */
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card img{
+    height: 2.5rem;
+}
+
+.feature-card h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+.feature-card p {
+    font-size: 0.9rem;
+    color: #fff0f0;
+}
+
+
+.feature-card {
+    position: relative; /* Required for positioning the badge */
+    width: 200px; /* Adjust as needed */
+    padding: 20px;
+    /* border: 1px solid #ccc; */
+    border-radius: 10px;
+    text-align: center;
+    background-color: #ffffff;
+    background:#31384a;
+    transition: transform 0.2s;
+    box-shadow: 
+    5px 5px 15px rgba(0, 0, 0, 0.1),
+    -1px -1px 5px rgba(0, 0, 0, 0.056);
+
+    transition: all 0.3s ease;
+    transform: translateY(0);
+}
+
+.feature-card:hover {
+    transform: scale(1.05); /* Optional: Add hover effect */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
+}
+.notification-badge {
+    position: absolute;
+    top: -10px; /* Adjust to position the badge */
+    right: -10px; /* Adjust to position the badge */
+    background-color: red; /* Badge color */
+    color: white; /* Text color */
+    border-radius: 50%; /* Makes it a circle */
+    width: 25px; /* Size of the circle */
+    height: 25px; /* Size of the circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Add shadow */
+}
+
+
+
+
+
+
+

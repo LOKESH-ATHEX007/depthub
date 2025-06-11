@@ -1,0 +1,15 @@
+
+WORKS DONE
+
+1.Messages sent and reflected
+2.deletion done and reflected
+3.img and file handled properly
+4.dropdown working
+
+
+WORKS DO BE DONE
+
+1.Sorting
+2.searching
+
+

@@ -1,0 +1,184 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    width: 100vw;
+    height:100vh;
+    overflow-x: hidden;
+    background-color: #f9f9f9;
+    color: #333;
+    padding-left: 110px;
+}
+
+.outerWrapper {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(-225deg, #7085B6 0%, #87A7D9 50%, #DEF3F8 100%);
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.formContainer {
+
+    width: 100%;
+
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+   
+}
+
+.container {
+    max-width: 600px;
+    padding: 20px;
+    padding-top: 0;
+    background-color: aliceblue;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    
+}
+.container h2{
+    margin-bottom:1rem;
+}
+
+.container2 {
+    background-color: rgb(189, 221, 255);
+    height:457px;
+    padding: 20px;
+    border-radius: 8px;
+    width: 40%; 
+    transform: translateX(-10px);
+  
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+
+
+}
+.container2 h4{
+    padding: 0;
+    padding-bottom:1rem ;
+}
+.container2 textarea{
+    height: 80%;
+    width: 100%;
+
+}
+
+
+/* Form groups */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Label */
+label {
+    display: block;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+/* Inputs and Textareas */
+input[type="text"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+}
+input[type="file"]{
+   border:none;
+    padding:8px;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: white;
+
+}
+
+/* Select styling */
+select {
+    padding: 10px;
+}
+
+/* Textarea */
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Checkbox group */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Checkbox label */
+.checkbox-group label {
+    color: #555;
+}
+
+/* Submit button */
+.submit-button {
+    display: inline-block;
+    width: 100%;
+    padding: 12px;
+  
+    background-color: #255058;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit-button:hover {
+    background-color: #4e97a4;
+}
+input[type="date"]{
+    background-color:rgb(255, 255, 255);
+    padding: .3rem;
+    border:none;
+    border-radius:4px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* General input focus styling */
+input[type="text"]:focus,
+input[type="file"]:focus,
+select:focus,
+textarea:focus,
+input[type="date"]:focus,
+input[type="checkbox"]:focus {
+    outline: none;
+   
+    box-shadow:inset 0 0 5px rgba(60, 63, 66, 0.337); /* Subtle glow effect */
+   
+}
+/* Focus styling for submit button */
+.submit-button:focus {
+    outline: none;
+    border-color: #0056b3; /* Darker blue border */
+    box-shadow: 0 0 5px rgba(0, 86, 179, 0.5); /* Glow effect for button */
+}
+
+
+
+/* Responsive design */
+@media (max-width: 500px) {
+    .container {
+        padding: 15px;
+    }
+}
+
+

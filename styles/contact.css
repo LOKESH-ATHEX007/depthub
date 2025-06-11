@@ -1,0 +1,767 @@
+/* 
+:root {
+    
+    --background-color: white;
+    --white: #ffffff; 
+    --text-color: #E5E5E5;
+
+    
+    --danger-color: linear-gradient(45deg, #FF4500, #D62700); 
+    --chat-header:rgb(43, 49, 57);
+    --sidebar-width:25%;
+
+
+   
+    --secondary-color: rgb(53, 61, 72); 
+    --message-box: rgb(65, 76, 90);
+    
+    --recieved-message:rgb(53, 53, 53);
+    --message-received:white;
+
+
+    --message-sent:rgb(116, 212, 204);
+    --sent-message:white;
+    --sent-secondary:aliceblue;
+
+
+
+
+    --input-bottom:rgb(65, 76, 90);
+    --active-list-color:white;
+
+    --send-btn:white;
+    --send-btn-text:black;
+
+    
+} */
+
+:root{
+
+  
+    --background-color: white;
+    --white: #ffffff;
+    --text-color: #E5E5E5; 
+
+    --danger-color: linear-gradient(45deg, #FF4500, #D62700);
+    --button-gradient: linear-gradient(45deg, #FFA500, #D18B00);
+    --chat-header:rgba(65, 76, 90, 0.467);
+    --sidebar-width:25%;
+
+
+    --secondary-color: rgb(53, 61, 72); 
+    
+    --recieved-message:rgb(53, 53, 53);
+    --message-received:aliceblue;
+
+
+    --message-sent:rgb(58, 100, 130);
+    --sent-message:white;
+    --sent-secondary:aliceblue;
+
+    
+    --sent-message:rgb(40, 38, 38);
+    --sent-secondary:rgb(88, 93, 98);
+    --message-sent:rgb(99, 235, 197);
+
+
+    --input-bottom:rgb(65, 76, 90);
+    --message-box: rgb(255, 255, 255);
+    --active-list-color:Black;
+
+     --send-btn:rgb(85, 122, 170);
+    --send-btn-text:rgb(255, 255, 255);
+    --file-upload-btn:rgb(85, 122, 170);
+
+
+  --new:  rgb(255, 115, 92);
+
+
+}
+
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--background-color);
+    margin: 0;
+    padding: 0;
+}
+
+
+.container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Sidebar */
+.sidebar {
+   max-width: var(--sidebar-width);
+   max-height:100vh ;
+    background: var(--secondary-color);
+    color: var(--white);
+    padding: 0px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+   
+}
+
+
+.teacher-list ,.student-list{
+    max-height: 100%;
+    overflow-y: auto;
+    margin-top: 10px;
+    padding: 0;
+    /* background-color: #C9992E; */
+    
+}
+
+/* Chat Box */
+.chat-box {
+    width: calc(100% - var(--sidebar-width));
+    background: var(--message-box);
+    background-color: #151e25;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-header {
+    background: var(--chat-header);
+    color: var(--white);
+    padding: 15px;
+    font-size: 20px;
+    text-align: right;
+    backdrop-filter: blur(60px);
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 15px;
+    padding-inline: 50px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+
+.msg-box-vector{
+
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 45%;
+   
+}
+.chat-h1{
+    position:absolute;
+    top: 83%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   color:#799593;
+   text-align: center;
+}
+
+#teacher-chat-h1{
+    color:#fb9f75;
+}
+#teacher-chat-p{
+    color:#799593;
+}
+
+.chat-p{
+    position:absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   color:#fb9f75;
+}
+
+
+@keyframes floating {
+    0% { transform: translate(-50%, -50%) translateY(0); }
+    50% { transform: translate(-50%, -50%) translateY(-5px); }
+    100% { transform: translate(-50%, -50%) translateY(0); }
+}
+
+.msg-box-vector {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 45%;
+    animation: floating 3s ease-in-out infinite;
+    will-change: transform;
+}
+
+
+
+.chat-messages::-webkit-scrollbar{
+  display: none;
+}
+
+
+
+/* Messages */
+.message {
+    max-width: 60%;
+    padding: 10px;
+    padding-right: 40px;
+    margin: 5px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.sent {
+    background: var(--message-sent);
+    color: var(--sent-message);
+    align-self: flex-end;
+}
+
+.received {
+    background: var(--message-received);
+    color: var(--recieved-message);
+    align-self: flex-start;
+}
+
+
+.message-time-sent {
+    font-size: 12px;
+    color: var(--sent-secondary);
+    text-align: right;
+    margin-top: 5px;
+}
+
+.message-time-received {
+    font-size: 12px;
+    color: #555;
+    text-align: left;
+    margin-top: 5px;
+}
+
+
+.chat-input {
+    display: flex;
+    padding: 10px;
+    background: var(--input-bottom);
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Logout Button */
+.logout {
+    display: block;
+    text-align: center;
+    background: var(--danger-color);
+    color: var(--white);
+    padding: 10px;
+    margin-top: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    position:absolute;
+    bottom: 10px;
+    width: 85%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    
+
+}
+
+/* Message Time */
+.message-time-sender {
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    margin-top: 5px;
+}
+
+
+/* Dropdown */
+.message {
+    position: relative;
+}
+
+.dropdown {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    display: inline-block;
+}
+
+.dropdown-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 5px;
+    color:var(--sent-secondary);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 30px;
+    background: var(--white);
+    min-width: 120px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.dropdown-content button {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.dropdown-content button:hover {
+    background:var(--sent-secondary);
+}
+
+/* Send Button */
+#send-btn {
+    font-family: inherit;
+    font-size: 20px;
+    background: var(--send-btn);
+    color: var(--send-btn-text);
+    padding: 0.7em 1em;
+    padding-left: 0.9em;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: all 0.2s;
+    cursor: pointer;
+    padding: 10px;
+    margin-left: 5px;
+}
+
+#send-btn span {
+    display: block;
+    margin-left: 0.3em;
+    transition: all 0.3s ease-in-out;
+}
+
+#send-btn svg {
+    display: block;
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out;
+}
+
+#send-btn:hover .svg-wrapper {
+    animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+#send-btn:hover svg {
+    transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+#send-btn:hover span {
+    transform: translateX(5em);
+}
+
+#send-btn:active {
+    transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+    from {
+        transform: translateY(0.1em);
+    }
+    to {
+        transform: translateY(-0.1em);
+    }
+}
+
+/* File Input */
+input[type="file"] {
+    border: none;
+    outline: none;
+    appearance: none;
+    padding: 5px;
+   
+    border-radius: 4px;
+    background-color: var(--white);
+    color: var(--file-upload-btn);
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-left: 1rem;
+}
+
+input[type="file"]:hover {
+    background-color: var(--file-upload-btn);
+    color: var(--white);
+}
+
+input[type="file"]::-webkit-file-upload-button {
+    background-color: var(--file-upload-btn);
+    color: var(--white);
+    border: none;
+    padding: 8px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+    outline: none;
+}
+
+input[type="file"]::-webkit-file-upload-button:hover {
+    background-color: var(--primary-dark);
+}
+
+
+#search{
+    border:none;
+    outline:none;
+    width:100%;
+
+}
+
+/* From Uiverse.io by Smit-Prajapati */ 
+/* .container-search-main {
+    position: relative;
+    background: linear-gradient(135deg, rgb(179, 208, 253) 0%, rgb(164, 202, 248) 100%);
+    border-radius: 10px;
+    padding: 5px;
+    display: grid;
+    place-content: center;
+    z-index: 0;
+    width:100%;
+    
+  } */
+  
+  .search-container {
+    position: relative;
+    width: 91%;
+    border-radius: 4px;
+    background-color: #151e25;
+    margin-inline:15px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .search-container::after, .search-container::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    position: absolute;
+  }
+  
+  .search-container::before {
+    top: -1px;
+    left: -1px;
+    background-color: #151e25;
+    z-index: -1;
+  }
+  
+  .search-container::after {
+    bottom: -1px;
+    right: -1px;
+    background-color: #151e25;
+    box-shadow: rgba(79, 156, 232, 0.7019607843) 3px 3px 5px 0px, rgba(79, 156, 232, 0.7019607843) 5px 5px 20px 0px;
+    z-index: -2;
+  }
+  
+  .input {
+    padding: 10px;
+    width: 100%;
+    background-color: #151e25;
+    border: none;
+    color: #9EBCD9;
+    font-size: 20px;
+
+  }
+  
+  .input:focus {
+    outline: none;
+   
+  }
+
+
+
+
+  .sidebar h2{
+    margin-inline:14px;
+  }
+  
+  .search__icon {
+    width: 40px;
+    aspect-ratio: 1;
+    border-left: 2px solid white;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-radius: 50%;
+    padding-left: 12px;
+    margin-right: 10px;
+  }
+  
+  .search__icon:hover {
+    border-left: 3px solid white;
+  }
+  
+  .search__icon path {
+    fill: white;
+  }
+  #search::placeholder {
+    font-size: 15px;
+}
+
+
+
+
+
+.teacher-list ,.student-list{
+    max-height: 80%;
+    overflow-y: auto;
+    margin-top: 15px;
+    margin-bottom: 5.5rem;
+    padding: 0;
+   
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer/Edge */
+    /* background: #FFA500; */
+    
+    
+}
+
+
+
+.teacher-list::-webkit-scrollbar,
+.student-list::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.teacher-item, .student-item {
+
+    padding-inline:18px;
+    padding-block: 6px;
+    margin-left: 1rem;
+  
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    font-size: 16px;
+    list-style: none;
+    height: 2rem;
+    color: rgba(255, 255, 255, 0.788);
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    border-radius: 4px 0px 0px 4px;
+    
+
+  
+}
+
+
+
+
+
+/* Hover effect */
+.teacher-item:hover, .student-item:hover {
+    background-color: #ffffff2a;
+    color: #9EBCD9;
+}
+
+
+
+.active-item {
+    background-color: var(--message-box) !important; /* Change to your preferred highlight color */
+    color: var(--active-list-color) !important;
+    font-weight: bold;
+   
+background: #414c5a;
+
+
+
+         
+}
+
+#arrow-down{
+    margin-inline:auto;
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-bottom: 3rem;
+    position:absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    display: none;
+}
+.hidden {
+    display: none !important;
+}
+
+
+.unread-badge {
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 3px 7px;
+    border-radius: 50%;
+    margin-left: 10px;
+    display: none; /* Hide if no unread messages */
+}
+
+.sortDiv{
+    display:flex;
+    /* background-color: #799593; */
+    margin-inline:1rem;
+    height:2rem;
+    margin-top: .5rem;
+    justify-content: space-between;
+}
+.sortDiv select{
+   width:49%;
+    border:none;
+    outline:none;
+    border-radius:3px;
+}
+select {
+    appearance: none; /* Remove default styles */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #151e25;
+    border: 2px solid #e5f4ff;
+    border-radius: 5px;
+    padding: 0px 15px;
+    font-size: 16px;
+    color: #8f8f8f;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+    width: 100%;
+    max-width: 300px;
+}
+
+/* Add dropdown arrow */
+select {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%233498db"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 15px;
+    padding-right: 35px;
+}
+
+/* Hover and focus effect */
+select:hover {
+    border-color: #2980b9;
+}
+
+select:focus {
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+    border-color: #2980b9;
+}
+
+/* Disable style */
+select:disabled {
+    background-color: #f2f2f2;
+    cursor: not-allowed;
+    border-color: #ccc;
+}
+
+
+.no-class-message {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-inline:2rem;
+    list-style: none; /* Remove bullet point */
+}
+
+.no-class-message p {
+    margin: 0;
+    font-size: 16px;
+}
+/* No students found message styling */
+.no-students-message {
+    text-align: center;
+    padding: 20px;
+    color: #ffffff;
+}
+
+.no-students-message .no-students-icon {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+    opacity: 0.7;
+}
+
+.no-students-message p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* No students message styling */
+.no-students-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    text-align: center;
+    color: #666;
+}
+
+.no-students-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+    opacity: 0.6;
+}
+
+.no-students-text p {
+    margin: 5px 0;
+    font-size: 15px;
+}
+
+.no-students-text .subtext {
+    font-size: 13px;
+    color: #999;
+}
+
+.student-dept {
+    display: block;
+    font-size: 12px;
+    color: #666;
+    margin-top: 3px;
+}

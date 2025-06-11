@@ -1,0 +1,213 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+   
+    overflow: hidden;
+   
+}
+
+#formSec {
+    display: flex;
+    width: 100vw;
+    background-color: white;
+    padding-left: 110px;
+   
+}
+
+.leftDiv {
+    width: 30rem;
+    height: 100vh;
+    background-color: #fdce10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    padding: 2rem;
+  
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+.leftDiv h1{
+    font-size:2rem;
+    margin-bottom: 4rem;
+
+
+}
+
+
+
+.leftDiv p {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #555;
+}
+
+
+
+#placeholderText {
+color: #777;
+}
+
+.image-container {
+
+height: 200px;
+aspect-ratio: 3/4;
+border: 2px dashed #ccc;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+cursor: pointer;
+margin-bottom: 3rem;
+}
+#placeholderText {
+color: #777;
+font-size: 14px;
+}
+#previewImage {
+border: 1px solid #ddd;
+display: none; width: 100%; height: 100%; object-fit: cover;
+}
+
+.custom-file-input{
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+
+}
+
+#imageInput {
+    display: none;
+  }
+  
+
+  #customButton {
+  
+   
+    background-color: #ff8800;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    transition: all .2s ease-in;
+    border:1px solid #ffe819;
+  }
+  #customButton:hover{
+    background-color: #ffe819;
+    color: rgb(0, 0, 0);
+    border:1px solid rgb(0, 0, 0);
+    
+  }
+  
+ 
+  #fileName {
+    
+    margin-block: .8rem;
+ 
+    font-family: Arial, sans-serif;
+    color: #555;
+  }
+  
+
+.rightDiv {
+    flex: 100%;
+    padding: 2rem;
+    padding-top: 2rem;
+    height: 100vh;
+    overflow-Y: scroll;
+}
+
+
+.formGroup {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.formField {
+    flex: 1;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.formField label {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #333;
+}
+
+.formField input, .formField select {
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: aliceblue;
+
+    /* box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.05); */
+}
+
+.formField input:focus, .formField select:focus {
+    border-color: #fff672;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 215, 84, 0.3);
+}
+
+.submitBtn {
+    background-color:  #2E4750;
+    color: white;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+margin-left: auto;
+
+width:8rem;
+transition: all .2s ease-in-out;
+   
+}
+
+.submitBtn:hover {
+  letter-spacing: 2px;
+ transform:scale(.9)
+}
+
+@media only screen and (max-width: 650px) {
+    body{
+        overflow-y: auto;
+    }
+
+    #formSec {
+        flex-direction: column;
+        height: 100%;
+     
+        overflow-Y: scroll;
+       
+    }
+
+    .leftDiv {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+        padding-top:5rem;
+    }
+
+    .rightDiv {
+        padding: 1rem;
+        overflow-y: visible;
+       
+    }
+}

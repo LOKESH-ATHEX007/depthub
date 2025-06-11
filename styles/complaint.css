@@ -1,0 +1,53 @@
+
+*{
+    padding: none;
+    margin:none;
+}
+body {
+    background: #f8f9fa;
+    height:100vh;
+    padding-top:3rem;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: url("../pic/complaint-bg1.jpg");
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height:100vh;
+}
+.container {
+    max-width: 800px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.form-control, .form-select {
+    margin-bottom: 10px;
+}
+.btn-block {
+    width: 100%;
+}
+
+#complaint{
+
+    width:70%;
+
+}
+#vector-img{
+height:80vh;
+width:auto;
+}
+#vector-img h2{
+    
+    margin-left: 3rem;
+    transform: translateY(3rem);
+    color: rgb(110, 148, 149);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#vector-img img{
+    height:100%;
+}

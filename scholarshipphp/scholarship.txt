@@ -1,0 +1,34 @@
+i am preparing a scholarship request feature for dept hub
+first of all create a dummy login for students and teachers
+for students 
+table name st1 and userid email password regno
+for teachers
+table name teachers and userid email password T_id
+
+make the ui more professional and attarctive 
+
+for now create a request form for students
+once students made a scholarship request then after 3 months for request date only he can make other requests
+when students login they must me directed to this page
+stName , regno , fatherOccupation , motherOccupation , community these should be taken from st1 table and should be readonly
+
+for this scholarship students need to type
+reason for scholarship
+and need to attach income certificate 
+and other proofs
+when students click submit button , a modal should appear after 3months only they can apply for next scholarship
+in that modal there must be submit and cancel button ok
+below that the student should have view status button he can check the status by entering his regno , for now status can be pending....
+
+ok now i am going to display the scholarship request made by students to teacher ok 
+for that match the currentYear and class from scholarshiprequest table and class_teacher_allocation if these value matches , for the particular T_id in the class_teacher_allocation
+the reuests should apper
+only the regno should be displayed if they click see more button , it should appear side by side they can see the details entered by the students and change the status 
+3 status they can change are pending , underprogress and rejected ok..... for now make this for me
+
+<td>
+                            <a href="scholarshipphp/update_request.php?id=<?= $row['id'] ?>" class="see-more">See More</a>
+                        </td>
+
+
+make the ui more attarctive and professional....,choose wise color palette add some intresting animations
