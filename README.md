@@ -59,5 +59,5 @@ DeptHub/
 ## 🤝 Contributions
 Feel free to fork, improve, and submit pull requests!
 
-## 📄 License
-MIT License
+## 📄 Live demo
+Link:dept-hub.infinityfreeapp.com
